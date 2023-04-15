@@ -21,9 +21,7 @@ function getSumOfDigits(n) {
 		n = parseInt(n / 10)
 	}
 	if(sum >= 10) {
-		let sum2 = 0
-		String(sum).split('').map(elem => sum2 += +elem)
-		return sum2
+		return getSumOfDigits(sum)
 	}
 
 	return sum
